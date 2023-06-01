@@ -12,7 +12,6 @@
 \RequirePackage{pgffor}
 \RequirePackage{titlesec}
 \RequirePackage{tikz}
-\RequirePackage{fontspec}
 \RequirePackage[left=0.75in,top=0.3in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \RequirePackage{hyperref}
 \RequirePackage{fontawesome}
@@ -50,12 +49,14 @@
 
 % can makebox also be used?
 \newcommand\headerview{
-\begin{minipage}{0.25\linewidth}
-    \profpic{0.22}{images/profilepicture}
+\color{white}azeazeza\\azeazeza\\zaezaeza\\\color{black}
+\begin{minipage}{0.45\linewidth}
+    \center \name
+    \\\Large SOC Analyst
 \end{minipage}% 
 \hfill
 \begin{minipage}{0.45\linewidth}
-    \center \name \\[0.05cm] 
+    \center
     \contact % address \ mobile \\ mail
 \end{minipage}
 }
@@ -85,8 +86,7 @@
 
 \newcommand{\contact}{%
         {\small \@address  \cps \@mobile \\ \@mail%
-        \\%
-        \linkedinview \cps \githubview \\ 
+        \\\githubview \\ 
         } % 
 }
 
@@ -100,7 +100,7 @@
 }
 
 \newcommand\coverlettersubview{
-\begin{tabular}{>{\scshape \bfseries \color{\@themecolor}}l  >{\small }l}
+\begin{tabular}{>{\scshape \bfseries \color{\@themecolor}}l  >{\small }l}
 Company: & \@companyname \\
 Position: & \@claimedposition \\
 \end{tabular}
@@ -194,7 +194,4 @@ Position: & \@claimedposition \\
 
 \newcommand\createfootnote{%
   \renewcommand{\footnotesize}{\fontsize{7pt}{11pt}\selectfont}
-    \renewcommand\footnoterule{\rule{0.3\linewidth}{0.5pt}}
-    \let\thefootnote\relax\footnote{\today\ / \href{https://github.com/muratcankaracabey/latex_cv}{source code}}}
-
-
+    \renewcommand\footnoterule{\rule{0.3\linewidth}{0.5pt}}}
